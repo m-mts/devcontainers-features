@@ -1,6 +1,6 @@
 {
     "id": "npm",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "name": "npm",
     "documentationURL": "http://github.com/m-mtl/devcontainers-features/tree/main/src/npm",
     "description": "Installs one or more npm packages.",
