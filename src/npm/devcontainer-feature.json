@@ -1,0 +1,22 @@
+{
+    "id": "npm",
+    "version": "0.0.1",
+    "name": "npm",
+    "documentationURL": "http://github.com/m-mtl/devcontainers-features/tree/main/src/npm",
+    "description": "Installs one or more npm packages.",
+    "options": {
+        "packages": {
+            "type": "string",
+            "default": "",
+            "description": "A JSON array (string) of package objects to install, e.g. '[{\"package\":\"typescript\",\"global\":true,\"version\":\"latest\"}]'. Alternatively a comma-separated list of package names is supported for simple installs.",
+            "proposals": [
+                "[{\"package\":\"npm\",\"global\":true,\"version\":\"latest\"}]",
+                "[{\"package\":\"yarn\",\"global\":true,\"version\":\"latest\"}]",
+                "[{\"package\":\"typescript\",\"global\":true,\"version\":\"latest\"}]"
+            ]
+        }
+    },
+    "dependsOn": {
+        "ghcr.io/devcontainers/features/node": {}
+    }
+}
