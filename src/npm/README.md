@@ -14,7 +14,7 @@ Enable the feature in your `devcontainer.json`:
 ```jsonc
 "features": {
   "ghcr.io/m-mts/devcontainers-features/npm:0": {
-    "packages": "[{\"package\":\"typescript\",\"global\":true,\"version\":\"latest\"}]"
+    "packages": "-g yarn, -g typescript@5"
   }
 }
 ```
@@ -30,15 +30,6 @@ Each package object has the shape:
 ```
 
 Examples:
-
-- JSON array (preferred for per-package settings):
-
-```jsonc
-"packages": "[
-  {\"package\":\"typescript\",\"global\":true,\"version\":\"latest\"},
-  {\"package\":\"nodemon\",\"global\":false,\"version\":\"2.0.0\"}
-]"
-```
 
 - Comma-separated list (simple, installs each as `global latest`):
 
@@ -66,7 +57,7 @@ Example: run a smoke test locally that uses stubs for `node` and `npm` to valida
 
 ```bash
 # from repository root
-# PATH=/tmp/npm-stub:$PATH PACKAGES='[{"package":"typescript","global":true,"version":"latest"}]' bash src/npm/install.sh
+# PATH=/tmp/npm-stub:$PATH PACKAGES='-g npm@latest, -g yarn@latest, typescript@5' bash src/npm/install.sh
 ```
 
 Create the test scripts you want under `src/npm/test/` or `test/` and reference them in CI.

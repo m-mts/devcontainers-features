@@ -1,6 +1,6 @@
 {
     "id": "npm",
-    "version": "0.0.2",
+    "version": "0.0.3",
     "name": "npm",
     "documentationURL": "http://github.com/m-mtl/devcontainers-features/tree/main/src/npm",
     "description": "Installs one or more npm packages.",
@@ -8,11 +8,9 @@
         "packages": {
             "type": "string",
             "default": "",
-            "description": "Supported formats:\n  1) JSON array (string) of package objects, e.g. '[{\"package\":\"typescript\",\"global\":true,\"version\":\"latest\"}]'\n  2) Comma-separated list of package names, e.g. 'npm,yarn,typescript'\n  3) Comma-separated list of npm-style args per item, e.g. '-g npm@latest, -g yarn@latest, typescript@5' (each item is passed to 'npm install')",
+            "description": "Supported formats:\n  1) JSON array (string) of package objects, e.g. '[{\"package\":\"typescript\",\"global\":true,\"version\":\"latest\"}]'\n  2) Comma-separated list of package names, e.g. 'npm,yarn,typescript'\n  3) Comma-separated list of npm-style args per item, e.g. '-g npm@latest, -g yarn@latest, -g typescript@latest' (each item is passed to 'npm install')",
             "proposals": [
-                "[{\"package\":\"npm\",\"global\":true,\"version\":\"latest\"}]",
-                "[{\"package\":\"yarn\",\"global\":true,\"version\":\"latest\"}]",
-                "[{\"package\":\"typescript\",\"global\":true,\"version\":\"latest\"}]"
+                "-g npm@latest, -g yarn@latest, -g typescript@latest"
             ]
         }
     },
