@@ -13,7 +13,7 @@ Enable the feature in your `devcontainer.json`:
 
 ```jsonc
 "features": {
-  "ghcr.io/devcontainers-community/features/npm": {
+  "ghcr.io/m-mts/devcontainers-features/npm:0": {
     "packages": "[{\"package\":\"typescript\",\"global\":true,\"version\":\"latest\"}]"
   }
 }
@@ -44,6 +44,12 @@ Examples:
 
 ```jsonc
 "packages": "typescript,nodemon"
+```
+
+- Comma-separated npm-style args per item (allows -g and explicit versions):
+
+```jsonc
+"packages": "-g npm@latest, -g yarn@latest, typescript@5"
 ```
 
 - Fallback (older behavior): set `PACKAGE`, `VERSION`, and optional `GLOBAL` env vars.

@@ -8,7 +8,7 @@
         "packages": {
             "type": "string",
             "default": "",
-            "description": "A JSON array (string) of package objects to install, e.g. '[{\"package\":\"typescript\",\"global\":true,\"version\":\"latest\"}]'. Alternatively a comma-separated list of package names is supported for simple installs.",
+            "description": "Supported formats:\n  1) JSON array (string) of package objects, e.g. '[{\"package\":\"typescript\",\"global\":true,\"version\":\"latest\"}]'\n  2) Comma-separated list of package names, e.g. 'npm,yarn,typescript'\n  3) Comma-separated list of npm-style args per item, e.g. '-g npm@latest, -g yarn@latest, typescript@5' (each item is passed to 'npm install')",
             "proposals": [
                 "[{\"package\":\"npm\",\"global\":true,\"version\":\"latest\"}]",
                 "[{\"package\":\"yarn\",\"global\":true,\"version\":\"latest\"}]",
