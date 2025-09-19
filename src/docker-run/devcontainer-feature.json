@@ -1,0 +1,22 @@
+{
+    "id": "docker-run",
+    "version": "0.0.1",
+    "name": "docker-run",
+    "documentationURL": "http://github.com/m-mtl/devcontainers-features/tree/main/src/docker-run",
+    "description": "Helper feature to run Docker images inside devcontainers using docker-outside-of-docker. Provides a simple wrapper and example package names to pass to 'docker run'.",
+    "options": {
+        "images": {
+            "type": "string",
+            "default": "",
+            "description": "A comma-separated list of Docker image names to suggest for 'docker run' (e.g., 'hello-world'). You can also include common runtime params/options when suggesting examples, for example: '-it', '--rm', '-p 8080:80'.",
+            "proposals": [
+                "hello-world",
+                "--rm -e POSTGRES_PASSWORD=mysecretpassword -p 5432:5432 postgres:latest",
+                "--rm -d -p 6379:6379 redis:latest"
+            ]
+        }
+    },
+    "dependsOn": {
+        "ghcr.io/devcontainers/features/docker-outside-of-docker": {}
+    }
+}
