@@ -1,6 +1,6 @@
 {
     "id": "docker-run",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "name": "docker-run",
     "documentationURL": "http://github.com/m-mtl/devcontainers-features/tree/main/src/docker-run",
     "description": "Helper feature to run Docker images inside devcontainers using docker-outside-of-docker. Provides a simple wrapper and example package names to pass to 'docker run'.",
